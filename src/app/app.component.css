@@ -1,0 +1,37 @@
+.header {
+  background-color: white;
+  padding: 20px 20px 0;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 24px;
+}
+
+.nav-links a {
+  color: #634e4e;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.header-line {
+  border: none;
+  border-top: 2px solid #f8f9fa;
+  margin: 0;
+}
