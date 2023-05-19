@@ -1,0 +1,52 @@
+.history {
+  display: table;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  margin: 30px auto 0 auto;
+  width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.table {
+  margin-top: 30px;
+  width: 500px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  flex-direction: row;
+  padding: 10px;
+  width: 340px;
+  height: 140px;
+  text-align: left;
+  cursor: pointer;
+}
+
+img.card-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.card-body {
+  flex: 1;
+  padding: 10px 0;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.no-data {
+  text-align: left;
+  font-weight: 500;
+}

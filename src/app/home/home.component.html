@@ -1,0 +1,31 @@
+<div class="home">
+    <div class="justify-content">
+        <div class="search-user-form">
+            <h4>Search Github user</h4>
+            <form class="form-group" (submit)="searchUser()">
+                <input class="form-control my-2" type="text" name="username" placeholder="Enter Search"
+                    [(ngModel)]="username">
+                <button class="btn btn-outline-success my-2 w-100">Search</button>
+            </form>
+        </div>
+        <ng-container *ngIf="showResults">
+            <div class="search-results">
+                <span class="search-text">Search Results</span>
+                <ng-container *ngIf="userDetails; else noResults">
+                    <div class="card" (click)="openUserAccount()">
+                        <img [src]="userDetails?.avatar_url" alt="../../assets/default_avatar" class="card-img">
+                        <div class="card-body">
+                            <h5 class="card-title title">{{ userDetails?.login }}</h5>
+                            <p class="card-text">{{ userDetails?.name }}</p>
+                            <p class="card-text text"><span>{{ userDetails?.followers }} followers | {{
+                                    userDetails?.following }} following</span></p>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-template #noResults>
+                    <h6 class="not-found">No such user found!</h6>
+                </ng-template>
+            </div>
+        </ng-container>
+    </div>
+</div>

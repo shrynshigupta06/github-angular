@@ -5,4 +5,4 @@ This is a basic angular application that allows to fetch user's github account d
 ### How to run the project?
 ##### Clone the repository.
 ##### Install the dependencies using **npm install**.
-##### To run the application use command **ng serve**.
+##### To run the application use command **ng serve**. The application would now be running on `http://localhost:4200`.

@@ -1,0 +1,40 @@
+<div class="history">
+    <h5>Your search results</h5>
+
+    <table class="table table-bordered rounded">
+        <thead colspan="2">
+            <tr>
+                <td>Search Item</td>
+                <td>Search Results</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let row of tableData">
+                <td>{{ row[0] }}</td>
+                <td>
+                    <ng-container *ngIf="row[1]?.data !== 'No such user found.'; else noResults">
+                        <div class="card" (click)="openUserAccount(row)">
+                            <img [src]="row[1].avatar_url" alt="../../assets/default_avatar" class="card-img">
+                            <div class="card-body">
+                                <h5 class="card-title title">{{ row[1].login }}</h5>
+                                <p class="card-text">{{ row[1].name }}</p>
+                                <p class="card-text text"><span>{{row[1].followers}} followers | {{row[1].following}}
+                                        following</span></p>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-template #noResults>
+                        <p class="no-data">No such user found!</p>
+                    </ng-template>
+                </td>
+            </tr>
+            <tr *ngIf="!tableData.length" style="height: 65px;">
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-outline-success my-2 clear-btn" type="submit" (click)="clearHistory()">Clear Search
+        History</button>
+</div>
